@@ -60,7 +60,7 @@ img {
 header{
     width: 100%;
     display:flex;
-    border-bottom: 0.5rem solid #F4E08E;
+    border-bottom: 1rem solid #F4E08E;
 }
 
 figure{
@@ -77,11 +77,13 @@ main{
     margin: 2rem auto;
     text-align: center;
     color:#7D5118;
+    background-color: rgba(244,224, 142, 0.5);
 }
 /* About */
 .about{
     font-size:1.2rem;
-    line-height: 1.3;
+    line-height: 1.5;
+    padding: 1rem;
     
 }
 
@@ -89,43 +91,41 @@ h1 {
     font-family: 'Noto Serif JP', serif;
     font-size: 1.8rem;
     font-weight: 700;
+    margin: 1rem auto 2rem;
     color: #3D291B;
 }
 
 h3 {
-    color:#A1B3C2;
     font-family: 'Noto Serif JP', serif;
     font-size: 1.5rem;
     font-weight: 400;
     margin: 1rem auto 2rem;
+    
 }
-.intro {
-    width: 90%;
-    margin: auto;
-}
-
 
 /* Button */
 a{
     text-decoration: none;
-    color: #A1B3C2;
+    color:  #F4E08E;
 }
 button{
-    background:none;
+    background: #7D5118;
     font-size:1.3rem;
     font-weight:100;
     margin: 1rem auto;
     padding: 0.5rem;
-    border: 0.2rem solid #F4E08E;
-    color: #A1B3C2;
-    transition: transform 0.5s;
+    /* border: 0.2rem solid#A1B3C2; */
+    color: #F4E08E;
 }
 
-button:hover{
-    transform:scale(1.2);
-}
+
 
 /* Gallery */
+
+.gallery img {
+    width: 90%;
+    margin-bottom: 1rem;
+}
 
 /* Form */
 form {
@@ -159,7 +159,10 @@ footer{
 }
 
 nav{
+    width: 100%;
     margin:0.5rem auto;
+    padding: 1rem 0;
+    background-color: #3D291B;
 }
 .social{
     display:flex;
