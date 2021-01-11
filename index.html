@@ -7,17 +7,10 @@
     <title>Lunar Harvest</title>
 </head>
 <body>
-    <header>
+    <header id="start">
         <figure class="logo">
             <img src="./img/Lunar Harvest-logo.png" alt="Lunar Harvest Logo">
         </figure>
-        <nav>
-            <ul>
-                <li>About</li>
-                <li>Gallery</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
     </header>
     <main>
         <section class="about">
@@ -37,8 +30,38 @@
                 <br>
                 <button><a href="https://www.gardenclubjax.org/horticulture-corner-microgreens/" target="_blank">Microgreens</a></button>
             </article>
-
+            <section class="gallery">
+                <img src="./img/microgreens_1.jpg" alt="Variety of microgreeens">
+                <img src="./img/microgreens_2.jpg" alt="Variety of microgreeens">
+                <img src="./img/microgreens_3.jpg" alt="Variety of microgreeens">
+            </section>
+            <section class="contactform">
+                <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify-recaptcha="true" data-netlify="true"  >
+                    <label class = "hidden">Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                    <label for="name">Name</label>
+                    <input name="name" id= "name" type="text" placeholder="Your Name">
+        
+                    <label for="email">Email</label>
+                    <input name="email" id= "email" type="text" placeholder="Your emailname@business.com">
+        
+                    <label for="message">Message</label>
+                    <textarea name="message" id= message"></textarea>
+                    <div data-netlify-recaptcha="true"></div>
+                    <button type = "submit">Submit</button>
+                </form>
+            </section>
         </section>
     </main>
+    <footer>
+        
+        <div class="social">       
+           <a href="https://www.facebook.com/LunarHarvestFarms/"><img src="./img/facebook-icon.svg" alt="facebook icon"> </a>
+            <a href="https://www.instagram.com/lunarharvest.farm/"><img src="./img/insta-icon.svg" alt="instagram icon"></a>
+        </div>
+        <p>Find Us on Social Media | Lunar Harvest - &copy;2020</p>
+        <nav>
+           <a href="#start">Back to top</a>
+        </nav>
+    </footer>
 </body>
 </html>
