@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../img/LunarHarvest-logo.png';
+import logo from '../images/LunarHarvest-logo.png';
 import styled from 'styled-components'
 
 const Header = styled.header`
