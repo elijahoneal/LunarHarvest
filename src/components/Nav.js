@@ -3,13 +3,15 @@ import logo from '../images/LunarHarvest-logo.png';
 import styled from 'styled-components'
 
 const Header = styled.header`
-width: 90%;
+width: 
+90%;
 display: flex;
 justify-content: space-between;
 align-items:center;
-margin: 2rem 5%;
+margin: 2rem 0;
 background-color: rgb(255, 255, 255);
-padding-bottom: 2rem;
+padding: 0 5% 2rem;
+
 border-bottom: 1rem solid rgb(244, 224, 142);
     img{
         width:60%;

@@ -1,38 +1,20 @@
 .App {
   text-align: center;
+  min-width:360px;
+  
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1,h2,h3,h4,h5 {
+  font-family: 'Lobster', cursive;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p,span,a {
+  font-family: 'Oswald', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* Theme colors */
+/* #A1B3C2 Blue */
+/* #F4E08E Yellow */
+/* #7D5118 Brown */
+/* #3D291B Dark Brown */
