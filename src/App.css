@@ -5,8 +5,10 @@
   
 }
 
+
 h1,h2,h3,h4,h5 {
   font-family: 'Lobster', cursive;
+  color:#7D5118;
 }
 
 p,span,a {

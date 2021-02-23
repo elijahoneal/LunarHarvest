@@ -14,17 +14,29 @@ const HomePage = styled.section`
 
 width: 90%;
 margin: auto;
-article {
-   text-align:left;
-}
+
 h1{
-    color:#7D5118;
+
     font-size:2rem;
-}
-p{
-    color: #3D291B;
+  }
+a{
+    border: 0.1rem solid #7D5118;
+    padding: 0.1rem 0.3rem;
+    font-size: 1.3rem;
+    &:hover{
+        background-color: #7D5118;
+        color: #fff;
+    }
 }
 
+`
+
+const Article = styled.article`
+text-align:left;
+a ,p{
+    text-decoration:none;
+    color: #3D291B;
+  }
 `
 const Gallery = styled.section`
 display: flex;
@@ -51,15 +63,16 @@ const Home = () => {
 
     return (
         <HomePage className='homepage'>
-            <article>
+            <Article>
             <h1>Thank you for visiting!</h1>
                 <p>
-                Lunar Harvest is an idea that began to take shape in 2018. I moved to Orlando, FL a year earlier with aspirations of becoming a graphic designer. However, by mid 2018, I still had not made much progress on that career path. I started to wonder if there was something else that I was meant to do. Around that same time, I'd been watching alot of gardening/ farming videos which led me to try my hand at it. I had a small porch area where I experimented with different plants. The first plant I grew was a marigold I got from a market in Jacksonville, and I enjoyed nurturing and watching it grow. Next I tried a tomato plant which was a failure the first try. A few attempts later, I found success! Beautiful fruits started to grow from the thick vine. From that moment on I was hooked and decided on a new career path. One that would see organic nutrient dense food on peoples tables. I moved back to Jacksonville in May of 2019 and made preparations to start in earnest. The rest is history.
+                So you may be asking right now "What are microgreens?" Microgreens are vegetables and herbs that are intentionally harvested before reaching full maturity. They are older than sprouts and provide the most nutrients a few weeks after sprouting from the seeds.
                 </p>
                 <p>
                     Below are are a few of the microgreens that I currently offer. For more information about microgreens please visit our about section.
                 </p>
-            </article>
+                <Link to='/about'>About</Link>
+            </Article>
             <Gallery>
                 <figure>
                         <figcaption><h3>Beets</h3></figcaption>
