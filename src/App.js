@@ -2,6 +2,7 @@ import Home from './components/Home'
 import Nav from './components/Nav'
 import About from './components/About'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 import './App.css';
 import { Switch , Route } from 'react-router-dom'
 function App() {
@@ -21,6 +22,7 @@ function App() {
           </Route>
         </Switch>
       </main>
+      <Footer/>
     </div>
   );
 }

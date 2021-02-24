@@ -1,8 +1,7 @@
-.App {
+#root {
   text-align: center;
   min-width:360px;
-  
-  
+
 }
 
 
@@ -13,6 +12,7 @@ h1,h2,h3,h4,h5 {
 
 p,span,a, label, input, textarea, button {
   font-family: 'Oswald', sans-serif;
+  text-decoration: none;
 }
 
 /* Theme colors */
