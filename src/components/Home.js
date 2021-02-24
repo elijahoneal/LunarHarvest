@@ -23,6 +23,7 @@ a{
     border: 0.1rem solid #7D5118;
     padding: 0.1rem 0.3rem;
     font-size: 1.3rem;
+    color: #7D5118;
     &:hover{
         background-color: #7D5118;
         color: #fff;
@@ -75,27 +76,46 @@ const Home = () => {
             </Article>
             <Gallery>
                 <figure>
-                        <figcaption><h3>Beets</h3></figcaption>
+                        <figcaption>
+                            <h3>Beets</h3>
+                            <p>Harvest time: 10 - 14 days <br></br> Taste: Earthy Flavor</p>
+                        </figcaption>
                         <img src={beets1} alt="beets microgreens"/>
+                        
                 </figure>
                 <figure>
-                        <figcaption><h3>Broccoli</h3></figcaption>
+                        <figcaption>
+                            <h3>Broccoli</h3>
+                            <p>Harvest time: 7 - 10 days <br></br> Taste: Broccoli Flavor</p>
+                        </figcaption>
                         <img src={broccoli3} alt="broccoli microgreens"/>
                 </figure>
                 <figure>
-                        <figcaption><h3>Carrots</h3></figcaption>
+                        <figcaption>
+                            <h3>Carrots</h3>
+                            <p>Harvest time: 10 - 14 days <br></br> Taste: Carrot Flavor</p>
+                        </figcaption>
                         <img src={carrot1} alt="carrot microgreens"/>
                 </figure>
                 <figure>
-                        <figcaption><h3>Dill</h3></figcaption>
+                        <figcaption>
+                            <h3>Dill</h3>
+                            <p>Harvest time: 10 - 14 days <br></br> Taste: Dill Flavor</p>
+                        </figcaption>
                         <img src={dill1} alt="dill microgreens"/>
                 </figure>
                 <figure>
-                        <figcaption><h3>Kohlrabi</h3></figcaption>
+                        <figcaption>
+                            <h3>Kohlrabi</h3>
+                            <p>Harvest time: 7 - 10 days <br></br> Taste: Cabbage Flavor</p>
+                        </figcaption>
                         <img src={kohlrabi3} alt="kohlrabi microgreens"/>
                 </figure>
                 <figure>
-                        <figcaption><h3>Peashoots</h3></figcaption>
+                        <figcaption>
+                            <h3>Peashoots</h3>
+                            <p>Harvest time: 7 - 10 days <br></br> Taste: Pea Flavor</p>
+                        </figcaption>
                         <img src={peashoot2} alt="peashoots microgreens"/>
                 </figure>
             </Gallery>

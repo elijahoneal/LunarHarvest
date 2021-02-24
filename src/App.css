@@ -11,7 +11,7 @@ h1,h2,h3,h4,h5 {
   color:#7D5118;
 }
 
-p,span,a {
+p,span,a, label, input, textarea, button {
   font-family: 'Oswald', sans-serif;
 }
 
