@@ -61,26 +61,26 @@ const encode = (data) => {
         .join("&");
   }
 
-const postEmail = form => {
-    axios("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...form })
-    })
-    .then(() => alert("Success!"))
-    .catch(error => alert(error));
-}
+// const postEmail = form => {
+//     axios("/", {
+//         method: "POST",
+//         headers: { "Content-Type": "application/x-www-form-urlencoded" },
+//         body: encode({ "form-name": "contact", ...form })
+//     })
+//     .then(() => alert("Success!"))
+//     .catch(error => alert(error));
+// }
 
 const onSubmit = (e) => {
     e.preventDefault()
-    postEmail(formData)
     setFormData(initialForm)
 }
     return(
         <ContactForm>
             <h2>Questions?</h2>
             <h3></h3>
-            <form onSubmit={onSubmit}>
+            <form onSubmit={onSubmit} name="contact" netlify-honeypot="bot-field" data-netlify="true" hidden>
+            <input type="hidden" name="form-name" value="contact" />
                 <label>Name
                     <input
                     name='name'
