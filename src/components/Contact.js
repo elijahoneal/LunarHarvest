@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import axios from 'axios'
+import fetch from 'fetch'
 import styled from 'styled-components'
 
 
@@ -62,7 +62,7 @@ const encode = (data) => {
   }
 
 const postEmail = form => {
-    axios("/", {
+    fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({ "form-name": "contact", ...form })
@@ -80,7 +80,7 @@ const handleSubmit = e => {
         <ContactForm>
             <h2>Questions?</h2>
             <form onSubmit={handleSubmit} name="contact" netlify-honeypot="bot-field" data-netlify="true" hidden>
-            <input type="hidden" name="contact" value="contact" />
+            <input type="hidden" name="form-name" value="contact" />
                 <label>Name
                     <input
                     name='name'
