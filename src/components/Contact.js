@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import fetch from 'fetch'
+import axios from 'axios'
 import styled from 'styled-components'
 
 
@@ -62,7 +62,7 @@ const encode = (data) => {
   }
 
 const postEmail = form => {
-    fetch("/", {
+    axios("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({ "form-name": "contact", ...form })
@@ -101,8 +101,7 @@ const handleSubmit = e => {
                     <textarea
                     name='message'
                     type='email'
-                    onChange={onChange}
-                    />
+                    onChange={onChange}></textarea>
                 </label>
                 <button>Submit</button>
             </form>
