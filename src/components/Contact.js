@@ -7,7 +7,7 @@ import styled from 'styled-components'
 
 const ContactForm = styled.section`
 width:90%;
-margin: auto;
+margin: 2rem auto;
 form{
     display:flex;
     flex-direction:column;
@@ -41,6 +41,10 @@ form{
         }
     }
 }
+@media only screen and (min-width: 768px) {
+  width:70%;
+  }
+
 `
 
 

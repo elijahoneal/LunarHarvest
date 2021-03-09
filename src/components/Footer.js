@@ -10,6 +10,7 @@ background-color:#F4E08E;
     padding: 0.5rem 0;
 .social{
     width:60%;
+    height:auto;
     margin:auto;
     display;flex;
     
@@ -19,7 +20,17 @@ img{
     height:auto;
     margin:0.5rem;
 }
-
+@media only screen and (min-width: 768px) {
+   img{
+       width:8%;
+   }
+}
+@media only screen and (min-width: 1024px) {
+    img{
+        width:5%;
+    }
+   
+}
 `
 const Footer = () => {
     return(

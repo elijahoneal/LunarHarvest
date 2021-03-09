@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
+const AboutSec = styled.section`
+margin: 2rem auto;
+`
 const Article = styled.article`
 width: 90%;
 margin:0 auto 2rem;
@@ -14,7 +17,7 @@ a ,p{
 
 const About = () => {
     return (
-    <section>
+    <AboutSec>
             <Article>
                 <h2>About Lunar Harvest</h2>
                 <p>
@@ -24,7 +27,7 @@ const About = () => {
             </Article>
            
             <iframe width="90%" height="400" src="https://www.youtube.com/embed/iXbsclFnAdI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </section>
+    </AboutSec>
     )
 }
 

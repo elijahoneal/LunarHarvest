@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import logo from '../images/LunarHarvest-logo.png';
 import styled from 'styled-components'
-import { NavLink, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 const Header = styled.header`
 width: 90%;
 display: flex;
@@ -15,6 +15,12 @@ border-bottom: 1rem solid rgb(244, 224, 142);
       width:60%;
       height:auto;
   }
+  @media only screen and (min-width: 768px) {
+    margin-top:6.5rem;
+    img{
+        margin:auto;
+    }
+}
 `
 const Navigation = styled.nav`
     display: flex;
@@ -43,15 +49,7 @@ const Navigation = styled.nav`
             transform: translateX(0);
         }
       }
-    @media only screen and (min-width: 1024px) {
-        
-        .navlinks {
-            position:fixed;
-            width:15vw;
-            height:100vh;
-            flex-direction: column;
-        }
-    }
+   
 `
 const StyledLink = styled(Link)`
     text-decoration: none;

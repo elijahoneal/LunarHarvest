@@ -44,7 +44,7 @@ display: flex;
 flex-direction:column;
 align-items:center;
     figure{
-        margin-bottom:1.5rem;
+        margin:1.5rem auto;
         font-size: 1.3rem;
     }
     figcaption{
@@ -56,6 +56,19 @@ align-items:center;
         height:auto;
         border-radius: 50%;
         border: 1rem solid #F4E08E;
+    }
+    @media only screen and (min-width: 768px) {
+        flex-flow:row wrap;
+        figure{
+          width:35%;
+          
+      }
+      }
+    @media only screen and (min-width: 1024px) {
+        figure{
+            width: 30%;
+        }
+       
     }
 
 `
@@ -78,7 +91,7 @@ const Home = () => {
                 <figure>
                         <figcaption>
                             <h3>Beets</h3>
-                            <p>Harvest time: 10 - 14 days <br></br> Taste: Earthy Flavor</p>
+                            <p>Harvest time: 10 - 16 days <br></br> Taste: Earthy Flavor</p>
                         </figcaption>
                         <img src={beets1} alt="beets microgreens"/>
                         
@@ -93,14 +106,14 @@ const Home = () => {
                 <figure>
                         <figcaption>
                             <h3>Carrots</h3>
-                            <p>Harvest time: 10 - 14 days <br></br> Taste: Carrot Flavor</p>
+                            <p>Harvest time: 10 - 16 days <br></br> Taste: Carrot Flavor</p>
                         </figcaption>
                         <img src={carrot1} alt="carrot microgreens"/>
                 </figure>
                 <figure>
                         <figcaption>
                             <h3>Dill</h3>
-                            <p>Harvest time: 10 - 14 days <br></br> Taste: Dill Flavor</p>
+                            <p>Harvest time: 10 - 16 days <br></br> Taste: Dill Flavor</p>
                         </figcaption>
                         <img src={dill1} alt="dill microgreens"/>
                 </figure>

@@ -4,17 +4,29 @@
 
 }
 
+@font-face {
+  font-family: 'gothammedium';
+  src:url('./fonts/GothamMedium.ttf')
+     format('ttf');
+  font-weight: normal;
+  font-style: normal;
+
+}
 
 h1,h2,h3,h4,h5 {
   font-family: 'Lobster', cursive;
   color:#7D5118;
 }
 
-p,span,a, label, input, textarea, button {
+p,span, label, input, textarea, button {
+  font-family: 'gothammedium', sans-serif;
+  text-decoration: none;
+}
+a{
   font-family: 'Oswald', sans-serif;
   text-decoration: none;
 }
-
+ 
 /* Theme colors */
 /* #A1B3C2 Blue */
 /* #F4E08E Yellow */
