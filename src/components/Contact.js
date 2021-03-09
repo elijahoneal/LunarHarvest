@@ -52,35 +52,31 @@ const Contact = () => {
 const initialForm = {name: '' , email: '', message:''}
 const [formData , setFormData] = useState(initialForm)
 
-const onChange = (e) =>{
-    setFormData({ [e.target.name]: e.target.value })
-}
+const onChange = (e) => setFormData({ [e.target.name]: e.target.value })
+
 const encode = (data) => {
     return Object.keys(data)
         .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
         .join("&");
   }
 
-const postEmail = form => {
-    axios("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...form })
+  const handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...formData })
     })
-    .then(() => alert("Success!"))
-    .catch(error => alert(error));
-}
-const handleSubmit = e => {
-    e.preventDefault()
-    postEmail(formData)
-    setFormData(initialForm)
-}
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
+
+    e.preventDefault();
+  };
 
     return(
         <ContactForm>
             <h2>Questions?</h2>
             <form onSubmit={handleSubmit} name="contact" netlify-honeypot="bot-field" data-netlify="true" hidden>
-            <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="form-name" value="contact" />
                 <label>Name
                     <input
                     name='name'
