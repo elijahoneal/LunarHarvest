@@ -55,11 +55,11 @@ const [formData , setFormData] = useState(initialForm)
 const onChange = (e) =>{
     setFormData({ [e.target.name]: e.target.value })
 }
-const encode = (data) => {
-    return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&");
-  }
+// const encode = (data) => {
+//     return Object.keys(data)
+//         .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+//         .join("&");
+//   }
 
 // const postEmail = form => {
 //     axios("/", {
@@ -71,15 +71,11 @@ const encode = (data) => {
 //     .catch(error => alert(error));
 // }
 
-const onSubmit = (e) => {
-    e.preventDefault()
-    setFormData(initialForm)
-}
+
     return(
         <ContactForm>
             <h2>Questions?</h2>
-            <h3></h3>
-            <form onSubmit={onSubmit} name="contact" netlify-honeypot="bot-field" data-netlify="true" hidden>
+            <form name="contact" netlify-honeypot="bot-field" data-netlify="true" hidden>
             <input type="hidden" name="form-name" value="contact" />
                 <label>Name
                     <input
@@ -104,7 +100,7 @@ const onSubmit = (e) => {
                     onChange={onChange}
                     />
                 </label>
-                <button>Submit</button>
+                <button type='submit'>Submit</button>
             </form>
         </ContactForm>
     )
