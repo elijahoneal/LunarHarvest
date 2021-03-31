@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import axios from 'axios'
+import React, { useState , useEffect } from 'react'
+import * as Yup from 'yup'
 import styled from 'styled-components'
-
+import FormSchema from '../validation/FormSchema'
 
 
 
@@ -44,15 +44,33 @@ form{
 @media only screen and (min-width: 768px) {
   width:70%;
   }
+  @media only screen and (min-width: 1024px) {
+    width: 45%;
 
 `
 
 
 const Contact = () => {
 const initialForm = {name: '' , email: '', message:''}
+const initialFormErrors = {name:'', email:'', message:''  }
 const [formData , setFormData] = useState(initialForm)
+const [ formErrors, setFormErrors] = useState(initialFormErrors)
+const [disabled , setDisabled] = useState(true)
 
-const onChange = (e) => setFormData({ [e.target.name]: e.target.value })
+const onChange = (e) => {
+    const { name , value } = e.target
+    Yup.reach(FormSchema , name)
+    .validate(value)
+    .then(() => setFormErrors({...formErrors , [name]: ''}))
+    .catch( err => setFormErrors({...formErrors, [name]: err.errors[0]}))
+    setFormData({ [name]: value })
+}
+
+useEffect(()=> {
+    FormSchema.isValid(formData)
+    .then(isValid => setDisabled(!isValid))
+    .catch( err => console.log(err))
+  },[formData])
 
 const encode = (data) => {
     return Object.keys(data)
@@ -70,6 +88,7 @@ const encode = (data) => {
       .catch(error => alert(error));
 
     e.preventDefault();
+    setFormData(initialForm)
   };
 
     return(
@@ -77,6 +96,7 @@ const encode = (data) => {
             <h2>Questions?</h2>
             <form onSubmit={handleSubmit} name="contact" netlify-honeypot="bot-field" data-netlify="true" hidden>
                 <input type="hidden" name="form-name" value="contact" />
+                <div>{formErrors.name}</div>
                 <label>Name
                     <input
                     name='name'
@@ -85,6 +105,7 @@ const encode = (data) => {
                     onChange={onChange}
                     />
                 </label>
+                <div>{formErrors.email}</div>
                 <label>Email
                     <input
                     name='email'
@@ -93,13 +114,14 @@ const encode = (data) => {
                     onChange={onChange}
                     />
                 </label>
+                <div>{formErrors.message}</div>
                 <label>Message
                     <textarea
                     name='message'
                     type='email'
                     onChange={onChange}></textarea>
                 </label>
-                <button>Submit</button>
+                <button disabled={disabled}>Submit</button>
             </form>
         </ContactForm>
     )
