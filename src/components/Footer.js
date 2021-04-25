@@ -36,8 +36,8 @@ const Footer = () => {
     return(
         <Foot>
             <section className='social'>
-                <img src={fb} alt='facebook.com/lunarharvest'/>
-                <img src={ig} alt='instagram.com/lunarharvest.farm'/>
+                <a href='https://www.facebook.com/LunarHarvestFarms' target='_blank' ><img src={fb} alt='facebook.com/lunarharvestfarms'/></a>
+                <a href='https://www.instagram.com/lunarharvest.farm/' target='_blank' > <img src={ig} alt='instagram.com/lunarharvest.farm'/></a>              
             </section>
             <p>Find Us On Social Media | Lunar Harvest - &copy; 2021 </p>
         </Foot>

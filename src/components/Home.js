@@ -8,7 +8,10 @@ import carrot1 from '../images/carrot-1.jpg'
 import dill1 from '../images/dill-1.jpg'
 import kohlrabi3 from '../images/kohlrabi-3.jpg'
 import peashoot2 from '../images/peashoots-2.jpg'
-
+import fb from '../images/facebook.svg'
+import ig from '../images/instagram.svg'
+import towers from '../images/vertical-towers.jpg'
+import seedlings from '../images/seedlings.jpg'
 
 const HomePage = styled.section`
 
@@ -37,7 +40,28 @@ text-align:left;
 a ,p{
     text-decoration:none;
     color: #3D291B;
+    border:none;
+    img{
+        width:10%;
+    }
   }
+.pics{
+    display:flex;
+    justify-content: space-between;
+}
+img{
+    width: 48%;
+    margin: 1rem 0;
+}
+@media only screen and (min-width: 768px) {
+    a{
+        img{
+            width:5%;
+        }
+      }
+  }
+
+
 `
 const Gallery = styled.section`
 display: flex;
@@ -78,7 +102,21 @@ const Home = () => {
     return (
         <HomePage className='homepage'>
             <Article>
-            <h1>Thank you for visiting!</h1>
+            <h1>Latest News</h1>
+                <p>
+                    Lunar Harvest is transitioning to Vertical Gardening! We will be sharing our progress on social media as we grow full grown herbs,fruits, and vegetables indoors. Follow us on Facebook and Instagram to see the new tools and products we'll be using.
+                </p>
+                <section className='pics'>
+                    <img src={towers} alt='vertical garden towers for urban farming'/>
+                    <img src={seedlings} alt='pea seeds starting to sprout'/>
+                </section>
+                <section className='social'>
+                    <a href='https://www.facebook.com/LunarHarvestFarms' target='_blank' ><img src={fb} alt='facebook.com/lunarharvestfarms'/></a>
+                    <a href='https://www.instagram.com/lunarharvest.farm/' target='_blank' > <img src={ig} alt='instagram.com/lunarharvest.farm'/></a>              
+                </section>
+            </Article>
+            {/* <Article>
+                <h2>Thank you for visiting!</h2>
                 <p>
                 So you may be asking right now "What are microgreens?" Microgreens are vegetables and herbs that are intentionally harvested before reaching full maturity. They are older than sprouts and provide the most nutrients a few weeks after sprouting from the seeds.
                 </p>
@@ -86,7 +124,7 @@ const Home = () => {
                     Below are are a few of the microgreens that I currently offer. For more information about microgreens please visit our about section.
                 </p>
                 <Link to='/about'>About</Link>
-            </Article>
+            </Article> */}
             <Gallery>
                 <figure>
                         <figcaption>
