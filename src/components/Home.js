@@ -27,10 +27,7 @@ a{
     padding: 0.1rem 0.3rem;
     font-size: 1.3rem;
     color: #7D5118;
-    &:hover{
-        background-color: #7D5118;
-        color: #fff;
-    }
+  
 }
 
 `
@@ -110,10 +107,7 @@ const Home = () => {
                     <img src={towers} alt='vertical garden towers for urban farming'/>
                     <img src={seedlings} alt='pea seeds starting to sprout'/>
                 </section>
-                <section className='social'>
-                    <a href='https://www.facebook.com/LunarHarvestFarms' target='_blank' ><img src={fb} alt='facebook.com/lunarharvestfarms'/></a>
-                    <a href='https://www.instagram.com/lunarharvest.farm/' target='_blank' > <img src={ig} alt='instagram.com/lunarharvest.farm'/></a>              
-                </section>
+                <a href='#bottom'>Social Media Links Below</a>
             </Article>
             {/* <Article>
                 <h2>Thank you for visiting!</h2>
@@ -170,6 +164,7 @@ const Home = () => {
                         <img src={peashoot2} alt="peashoots microgreens"/>
                 </figure>
             </Gallery>
+            <span id="bottom"></span>
        </HomePage>
     )
 }
