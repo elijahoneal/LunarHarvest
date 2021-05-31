@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
 // images
 import beets1 from '../images/beets-1.jpg'
 import broccoli3 from '../images/broccoli-3.jpg'
@@ -8,10 +7,8 @@ import carrot1 from '../images/carrot-1.jpg'
 import dill1 from '../images/dill-1.jpg'
 import kohlrabi3 from '../images/kohlrabi-3.jpg'
 import peashoot2 from '../images/peashoots-2.jpg'
-import fb from '../images/facebook.svg'
-import ig from '../images/instagram.svg'
-import towers from '../images/vertical-towers.jpg'
-import seedlings from '../images/seedlings.jpg'
+import garden from '../images/vertical-garden-1.jpg'
+import cucumber from '../images/cucumber-1.jpg'
 
 const HomePage = styled.section`
 
@@ -42,6 +39,9 @@ a ,p{
         width:10%;
     }
   }
+a {
+    border: 0.25rem solid #F4E08E;
+}
 .pics{
     display:flex;
     justify-content: space-between;
@@ -104,8 +104,8 @@ const Home = () => {
                     Lunar Harvest is transitioning to Vertical Gardening! We will be sharing our progress on social media as we grow full grown herbs,fruits, and vegetables indoors. Follow us on Facebook and Instagram to see the new tools and products we'll be using.
                 </p>
                 <section className='pics'>
-                    <img src={towers} alt='vertical garden towers for urban farming'/>
-                    <img src={seedlings} alt='pea seeds starting to sprout'/>
+                    <img src={garden} alt='vertical garden towers for urban farming'/>
+                    <img src={cucumber} alt='pea seeds starting to sprout'/>
                 </section>
                 <a href='#bottom'>Social Media Links Below</a>
             </Article>

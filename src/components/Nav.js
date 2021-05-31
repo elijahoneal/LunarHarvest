@@ -111,6 +111,8 @@ const Nav = () => {
             <NavLinks active={active} className='navlinks'>
                 <StyledLink onClick={toggle} to = '/'>Home</StyledLink>
                 <StyledLink onClick={toggle} to = '/about'>About</StyledLink>
+                <StyledLink onClick={toggle} to = '/events'>Events</StyledLink>
+                <StyledLink onClick={toggle} to = '/partners'>Partners</StyledLink>
                 <StyledLink onClick={toggle} to = '/contact'>Contact</StyledLink>
             </NavLinks>
         </Navigation>

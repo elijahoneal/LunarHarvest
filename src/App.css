@@ -25,6 +25,8 @@ p,span, label, input, textarea, button {
 a{
   font-family: 'Oswald', sans-serif;
   text-decoration: none;
+  
+
 }
 .hidden{
   display:none;
