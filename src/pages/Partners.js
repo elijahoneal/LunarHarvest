@@ -20,18 +20,28 @@ a{
    &:hover {
         color:green;
     }
+   
 }
 p{
     color: #3D291B;
   }
 section {
     display: flex;
+    flex-direction: column;
+    align-item: center;
     justify-content: space-between;
     img{
-        width: 30%;
+        width: 100%;
         height: auto;
+        margin-bottom: 0.5rem;
        
     }
+    @media only screen and (min-width: 768px) {
+        flex-direction:row;
+        img {
+            width:30%;
+        }
+      }
 }
 `
 

@@ -19,12 +19,16 @@ h1{
 
     font-size:2rem;
   }
-a{
-    border: 0.1rem solid #7D5118;
-    padding: 0.1rem 0.3rem;
-    font-size: 1.3rem;
+  a{
+    text-decoration:none;
+    background-color: #F4E08E;
     color: #7D5118;
-  
+    padding: 0.35rem;
+    transition: transform 0.5s;
+   &:hover {
+        color:green;
+    }
+   
 }
 
 `

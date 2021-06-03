@@ -10,13 +10,20 @@ display:flex;
 margin: 2rem auto;
 justify-content:space-around;
 text-align:left;
-a ,p{
+    p{
     text-decoration:none;
     color: #3D291B;
   }
-  a {
-    border: 0.25rem solid #F4E08E;
-    padding: 0.25rem;
+  a{
+    text-decoration:none;
+    background-color: #F4E08E;
+    color: #7D5118;
+    padding: 0.35rem;
+    transition: transform 0.5s;
+   &:hover {
+        color:green;
+    }
+   
 }
 img{
     width: 25%;
