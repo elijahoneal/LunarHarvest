@@ -27,6 +27,7 @@ text-align:left;
 }
 img{
     width: 25%;
+    height:auto;
     margin: 1rem 0;
 }
 section{
