@@ -53,6 +53,7 @@ a {
 img{
     width: 48%;
     margin: 1rem 0;
+    border-radius: 25px;
 }
 @media only screen and (min-width: 768px) {
     a{

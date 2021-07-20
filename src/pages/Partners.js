@@ -34,6 +34,7 @@ section {
         width: 100%;
         height: auto;
         margin-bottom: 0.5rem;
+        border-radius: 25px;
        
     }
     @media only screen and (min-width: 768px) {

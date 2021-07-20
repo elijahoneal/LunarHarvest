@@ -11,19 +11,12 @@ margin: 2rem auto;
 form{
     display:flex;
     flex-direction:column;
-    background-color:#F4E08E;
-    font-size:1.3rem;
-    label{
-        display:flex;
-        width:90%;
-        margin: 0.5rem auto;
-        align-items:center;
-        justify-content:space-between;
-        color: #7D5118;
-    }
+    font-size:1.5rem;
     input , textarea{
-        width:80%;
-        border: none;
+        width:90%;
+        height:1.5rem;
+        margin: 0.1rem auto;
+        border: 0.1rem solid #7D5118;
     }
     textarea{
         height: 5rem;
@@ -34,9 +27,10 @@ form{
         border: 0.1rem solid #7D5118;
         padding: 0.1rem 0.3rem;
         font-size: 1.3rem;
-        background-color:#fff;
+        background-color: #7D5118;
+        color: #F4E08E;
         &:hover{
-            background-color: #7D5118;
+            background-color:  #3D291B;
             color: #fff;
         }
     }
@@ -103,30 +97,25 @@ const encode = (data) => {
             <form onSubmit={handleSubmit} name="contact" netlify-honeypot="bot-field" data-netlify="true" hidden>
                 <input type="hidden" name="form-name" value="contact" />
                 <div>{formErrors.name}</div>
-                <label>Name
                     <input
                     name='name'
                     type='text'
                     placeholder='Name'
                     onChange={onChange}
                     />
-                </label>
                 <div>{formErrors.email}</div>
-                <label>Email
                     <input
                     name='email'
                     type='email'
                     placeholder='Email@business.com'
                     onChange={onChange}
                     />
-                </label>
                 <div>{formErrors.message}</div>
-                <label>Message
                     <textarea
                     name='message'
                     type='email'
+                    placeholder ="Enter Text"
                     onChange={onChange}></textarea>
-                </label>
                 <button disabled={disabled}>Submit</button>
             </form>
         </ContactForm>

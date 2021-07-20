@@ -29,6 +29,7 @@ img{
     width: 25%;
     height:auto;
     margin: 1rem 0;
+    border-radius: 25px;
 }
 section{
     margin:0 1rem;
@@ -39,6 +40,20 @@ const Events = () => {
     return (
         <EventSec>
             <h2>Upcoming Events</h2>
+        <Article>
+            <img src={jaxVegFest} alt='Jax Veg Vest'/>
+            <section>
+              <h3>September 2021 Jax Veg Vest</h3>
+              <p>Saturday, September 4th, 2021</p>
+              <p>11am - 5pm EST</p>
+
+            <p>
+            Lunar Harvest will be at the Jax Veg Fest on  September 4th! We will have microgreens available for sale and information about vertical gardening. See you soon! Please click the link below for more information about the event.
+            </p>
+            <a href=' jaxvegfest.weebly.com' target="_blank">Jax Veg Fest</a>
+            </section>
+           
+        </Article>
         <Article>
             <img src={jaxVegFest} alt='Jax Veg Vest'/>
             <section>
