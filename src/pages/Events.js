@@ -27,9 +27,10 @@ text-align:left;
 }
 img{
     width: 25%;
-    height:auto;
+    height: 50%;
     margin: 1rem 0;
     border-radius: 25px;
+    display: none;
 }
 section{
     margin:0 1rem;
