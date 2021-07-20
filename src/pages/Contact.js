@@ -57,14 +57,20 @@ const [formData , setFormData] = useState(initialForm)
 const [ formErrors, setFormErrors] = useState(initialFormErrors)
 const [disabled , setDisabled] = useState(true)
 
-const onChange = (e) => {
-    const { name , value } = e.target
+const validateForm = (name , value) => {
     Yup.reach(FormSchema , name)
     .validate(value)
     .then(() => setFormErrors({...formErrors , [name]: ''}))
     .catch( err => setFormErrors({...formErrors, [name]: err.errors[0]}))
-    setFormData({ [name]: value })
+
+
 }
+
+const onChange = (e) => {
+    const { name , value } = e.target
+    setFormData({ ...formData , [name]: value })
+    validateForm( name , value )
+} 
 
 useEffect(()=> {
     FormSchema.isValid(formData)
