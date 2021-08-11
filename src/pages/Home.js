@@ -1,12 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import Gallery from '../components/Gallery'
 // images
-import beets1 from '../images/beets-1.jpg'
-import broccoli3 from '../images/broccoli-3.jpg'
-import carrot1 from '../images/carrot-1.jpg'
-import dill1 from '../images/dill-1.jpg'
-import kohlrabi3 from '../images/kohlrabi-3.jpg'
-import peashoot2 from '../images/peashoots-2.jpg'
 import garden from '../images/vertical-garden-1.jpg'
 import cucumber from '../images/cucumber-1.jpg'
 
@@ -65,42 +60,11 @@ img{
 
 
 `
-const Gallery = styled.section`
-display: flex;
-flex-direction:column;
-align-items:center;
-    figure{
-        margin:1.5rem auto;
-        font-size: 1.3rem;
-    }
-    figcaption{
-        color:#3D291B;
-        margin-bottom:1rem;
-    }
-    img{
-        width:90%;
-        height:auto;
-        border-radius: 50%;
-        border: 1rem solid #F4E08E;
-    }
-    @media only screen and (min-width: 768px) {
-        flex-flow:row wrap;
-        figure{
-          width:35%;
-          
-      }
-      }
-    @media only screen and (min-width: 1024px) {
-        figure{
-            width: 30%;
-        }
-       
-    }
 
-`
 
 const Home = () => {
-
+ 
+    
     return (
         <HomePage className='homepage'>
             <Article>
@@ -124,51 +88,7 @@ const Home = () => {
                 </p>
                 <Link to='/about'>About</Link>
             </Article> */}
-            <Gallery>
-                <figure>
-                        <figcaption>
-                            <h3>Beets</h3>
-                            <p>Harvest time: 10 - 16 days <br></br> Taste: Earthy Flavor</p>
-                        </figcaption>
-                        <img src={beets1} alt="beets microgreens"/>
-                        
-                </figure>
-                <figure>
-                        <figcaption>
-                            <h3>Broccoli</h3>
-                            <p>Harvest time: 7 - 10 days <br></br> Taste: Broccoli Flavor</p>
-                        </figcaption>
-                        <img src={broccoli3} alt="broccoli microgreens"/>
-                </figure>
-                <figure>
-                        <figcaption>
-                            <h3>Carrots</h3>
-                            <p>Harvest time: 10 - 16 days <br></br> Taste: Carrot Flavor</p>
-                        </figcaption>
-                        <img src={carrot1} alt="carrot microgreens"/>
-                </figure>
-                <figure>
-                        <figcaption>
-                            <h3>Dill</h3>
-                            <p>Harvest time: 10 - 16 days <br></br> Taste: Dill Flavor</p>
-                        </figcaption>
-                        <img src={dill1} alt="dill microgreens"/>
-                </figure>
-                <figure>
-                        <figcaption>
-                            <h3>Kohlrabi</h3>
-                            <p>Harvest time: 7 - 10 days <br></br> Taste: Cabbage Flavor</p>
-                        </figcaption>
-                        <img src={kohlrabi3} alt="kohlrabi microgreens"/>
-                </figure>
-                <figure>
-                        <figcaption>
-                            <h3>Peashoots</h3>
-                            <p>Harvest time: 7 - 10 days <br></br> Taste: Pea Flavor</p>
-                        </figcaption>
-                        <img src={peashoot2} alt="peashoots microgreens"/>
-                </figure>
-            </Gallery>
+           <Gallery/>
             <span id="bottom"></span>
        </HomePage>
     )
