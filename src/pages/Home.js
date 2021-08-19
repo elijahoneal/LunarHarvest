@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import Gallery from '../components/Gallery'
 // images
 import garden from '../images/vertical-garden-1.jpg'
+import garden2 from '../images/vertical-garden-2.jpg'
+import garden3 from '../images/vertical-garden-3.jpg'
 import cucumber from '../images/cucumber-1.jpg'
 
 const HomePage = styled.section`
@@ -30,7 +32,7 @@ h1{
 
 const Article = styled.article`
 text-align:left;
-a ,p{
+p{
     text-decoration:none;
     color: #3D291B;
     border:none;
@@ -38,25 +40,7 @@ a ,p{
         width:10%;
     }
   }
-a {
-    border: 0.25rem solid #F4E08E;
-}
-.pics{
-    display:flex;
-    justify-content: space-between;
-}
-img{
-    width: 48%;
-    margin: 1rem 0;
-    border-radius: 25px;
-}
-@media only screen and (min-width: 768px) {
-    a{
-        img{
-            width:5%;
-        }
-      }
-  }
+
 
 
 `
@@ -72,11 +56,8 @@ const Home = () => {
                 <p>
                     Lunar Harvest is transitioning to Vertical Gardening! We will be sharing our progress on social media as we grow full grown herbs,fruits, and vegetables indoors. Follow us on Facebook and Instagram to see the new tools and products we'll be using.
                 </p>
-                <section className='pics'>
-                    <img src={garden} alt='vertical garden towers for urban farming'/>
-                    <img src={cucumber} alt='pea seeds starting to sprout'/>
-                </section>
-                <a href='#bottom'>Social Media Links Below</a>
+           
+             
             </Article>
             {/* <Article>
                 <h2>Thank you for visiting!</h2>
@@ -89,7 +70,7 @@ const Home = () => {
                 <Link to='/about'>About</Link>
             </Article> */}
            <Gallery/>
-            <span id="bottom"></span>
+          
        </HomePage>
     )
 }

@@ -7,10 +7,10 @@ import {IoIosArrowDropleftCircle , IoIosArrowDroprightCircle} from 'react-icons/
 
 const Arrow = styled.div`
 width: 10%;
-position: absolute:
+position: absolute;
 cursor: pointer;
 z-index: 10;
-font-size: 1.5rem;
+font-size: 2rem;
 color: #3D291B;
 `
 
@@ -28,15 +28,15 @@ const Gallery = () => {
 
     const NextArrow = ({onClick}) => {
         return (
-            <Arrow onClick={onClick}>
-                <IoIosArrowDroprightCircle className ="rightArr"/>
+            <Arrow onClick={onClick} className ="rightArr">
+                <IoIosArrowDroprightCircle/>
             </Arrow>
         )
     }
     const PrevArrow = ({onClick}) => {
         return (
-            <Arrow onClick={onClick}>
-                <IoIosArrowDropleftCircle />
+            <Arrow onClick={onClick} className = "leftArr" >
+                <IoIosArrowDropleftCircle/>
             </Arrow>
         )
     }
@@ -45,10 +45,12 @@ const Gallery = () => {
         lazyLoad: true,
         speed: 300,
         slidesToShow: 3,
+        slidesToScroll:1,
         centerMode: true,
         centerPadding:0,
-        nextArrow: <NextArrow />,
-        prevArrow: <PrevArrow />,
+        dots:true,
+        nextArrow: <NextArrow/>,
+        prevArrow: <PrevArrow/>,
         beforeChange: (current, next) => setImgIdx(next)
     }
   

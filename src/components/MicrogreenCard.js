@@ -6,11 +6,11 @@ const Microgreens = styled.article`
     display:flex;
     flex-direction:column;
     align-items:center;
-
+    margin-bottom:1.5rem;
     img{
-        width:90%;
+        width:50%;
         height:auto;
-        border-radius: 50%;
+        border-radius: 10%;
   
     }
 
@@ -18,13 +18,14 @@ const Microgreens = styled.article`
 
 
 const MicrogreenCard = (props) => {
-    const {id , img_url} = props.image
+    const {title, details , img_url} = props.image
   
     return (
 
         <Microgreens className = {props.className} >
-            <p>{id}</p>
+            <h2>{title}</h2>
             <img src={img_url}></img>
+            <p>{details}</p>
         </Microgreens>
     )
 }
