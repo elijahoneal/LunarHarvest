@@ -1,12 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import Gallery from '../components/Gallery'
-// images
-import garden from '../images/vertical-garden-1.jpg'
-import garden2 from '../images/vertical-garden-2.jpg'
-import garden3 from '../images/vertical-garden-3.jpg'
-import cucumber from '../images/cucumber-1.jpg'
-
 const HomePage = styled.section`
 
 width: 90%;
@@ -28,6 +22,14 @@ h1{
    
 }
 
+`
+const Feature = styled.article`
+display:flex;
+color: #3D291B;
+border-radius: 10px;
+padding: 1rem;
+background-color: #F4E08E;
+font-size:1.3rem;
 `
 
 const Article = styled.article`
@@ -51,15 +53,15 @@ const Home = () => {
     
     return (
         <HomePage className='homepage'>
-            <Article>
             <h1>Latest News</h1>
+            <Feature>
                 <p>
-                    Lunar Harvest is transitioning to Vertical Gardening! We will be sharing our progress on social media as we grow full grown herbs,fruits, and vegetables indoors. Follow us on Facebook and Instagram to see the new tools and products we'll be using.
+                    Lunar Harvest will be attending the Orange Park Farmer's Market starting September 5th! We will have cut to order microgreens and live 10in x 10in trays availabl for purchase.
                 </p>
            
              
-            </Article>
-            {/* <Article>
+            </Feature>
+            <Article>
                 <h2>Thank you for visiting!</h2>
                 <p>
                 So you may be asking right now "What are microgreens?" Microgreens are vegetables and herbs that are intentionally harvested before reaching full maturity. They are older than sprouts and provide the most nutrients a few weeks after sprouting from the seeds.
@@ -67,8 +69,7 @@ const Home = () => {
                 <p>
                     Below are are a few of the microgreens that I currently offer. For more information about microgreens please visit our about section.
                 </p>
-                <Link to='/about'>About</Link>
-            </Article> */}
+            </Article>
            <Gallery/>
           
        </HomePage>

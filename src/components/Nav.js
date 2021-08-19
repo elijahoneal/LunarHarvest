@@ -58,7 +58,9 @@ const StyledLink = styled(Link)`
     margin:auto;
     padding:0.3rem 0.2rem;
     width:100%;
-    
+    :hover{
+        color:#7D5118;
+    }
 
 
 `
