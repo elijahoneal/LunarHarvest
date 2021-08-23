@@ -44,8 +44,8 @@ const Events = () => {
         <Article>
             <img src={jaxVegFest} alt='Jax Veg Vest'/>
             <section>
-              <h3>September 2021 Jax Veg Vest</h3>
-              <p>Saturday, September 4th, 2021</p>
+              <h3>December 2021 Jax Veg Vest</h3>
+              <p>Saturday, December 4th, 2021</p>
               <p>11am - 5pm EST</p>
 
             <p>
