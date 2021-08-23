@@ -56,7 +56,7 @@ const Home = () => {
             <h1>Latest News</h1>
             <Feature>
                 <p>
-                    Lunar Harvest will be attending the Orange Park Farmer's Market starting September 5th! We will have cut to order microgreens and live 10in x 10in trays availabl for purchase.
+                    Lunar Harvest will be attending the Orange Park Farmer's Market starting September 5th! We will have cut to order microgreens and live 10in x 10in trays available for purchase.
                 </p>
            
              
