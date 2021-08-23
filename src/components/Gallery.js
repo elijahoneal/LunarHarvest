@@ -40,11 +40,14 @@ const Gallery = () => {
             </Arrow>
         )
     }
+
+    const width = window.matchMedia("(min-width:768px)")
+
     const settings = {
         infinite: true,
         lazyLoad: true,
         speed: 300,
-        slidesToShow: 3,
+        slidesToShow: width.matches ? 3 : 1,
         slidesToScroll:1,
         centerMode: true,
         centerPadding:0,
